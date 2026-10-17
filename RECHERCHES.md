@@ -286,18 +286,22 @@ Oui, prompt : "Pourquoi 0.1 + 0.2 ne fait pas 0.3 en JS et piège toFixed", vér
 **Question :** La méthode .reduce() n'a pas été vue en atelier. Explique ce qu'elle fait et réécris l'étape 2 avec elle.
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Et bien la méthode `.reduce()` permet de réduire les éléments d'un tableau à une seule valeur unique en appliquant une fonction de rappel (callback) munie d'un accumulateur. Elle parcourt le tableau du début à la fin en mémorisant le résultat intermédiaire à chaque étape. C'est l'outil idéal pour sommer des valeurs sans avoir à déclarer une variable d'accumulation externe au préalable.
 
 ...
 
 **Mon test dans la console :**
 
-```js
-// colle ici le test que tu as exécuté et le résultat obtenu
-```
+const heuresSemaine = [8, 9, 10, 8, 7, 6];
+const totalHeuresReduce = heuresSemaine.reduce((accumulateur, valeurCourante) => accumulateur + valeurCourante, 0);
+console.log(totalHeuresReduce); // Affiche : 48
+
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Expliquer Array.prototype.reduce() en JavaScript et donner un exemple de sommation", vérifié et validé sur MDN Web Docs.
 
 ## A3 — L'inventaire en console
 
