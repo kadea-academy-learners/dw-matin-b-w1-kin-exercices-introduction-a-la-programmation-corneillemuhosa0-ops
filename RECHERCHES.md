@@ -10,6 +10,8 @@
 **Question :** Pourquoi typeof null renvoie-t-il 'object' alors que null n'est pas un objet ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Dans la toute première version de JavaScript (en 1995), les valeurs étaient stockées sur des descripteurs de 32 bits, dont les premiers bits indiquaient le type de données. Les objets possédaient le tag binaire `000`. Comme la valeur `null` était représentée par une suite de zéros en mémoire (`0x00`), le moteur l'a interprétée à tort comme un objet. Cette anomalie historique a été conservée par la suite pour des raisons de rétrocompatibilité.
+
 
 ...
 
@@ -20,8 +22,10 @@
 ```
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/typeof#null
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Pourquoi typeof null retourne object en JavaScript", vérifié et validé sur MDN Web Docs.
 
 ## F2 — Le convertisseur de saisie
 
