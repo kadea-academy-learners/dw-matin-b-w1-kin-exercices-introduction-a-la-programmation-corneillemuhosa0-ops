@@ -35,7 +35,7 @@ Oui, prompt : "Pourquoi typeof null retourne object en JavaScript", vérifié et
 **Question :** Qu'est-ce que NaN, et pourquoi NaN === NaN renvoie false ? Quelle fonction utiliser pour le détecter ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
-
+`NaN` signifie "Not-a-Number" (pas un nombre) et représente une valeur numérique invalide ou le résultat d'une opération mathématique impossible. L'expression `NaN === NaN` renvoie `false` par définition dans la norme IEEE 754, car chaque `NaN` représente une erreur différente et aucune valeur invalide n'est égale à une autre. Pour détecter correctement un `NaN`, il faut utiliser la fonction globale `Number.isNaN()` ou `isNaN()`.
 ...
 
 **Mon test dans la console :**
@@ -43,6 +43,10 @@ Oui, prompt : "Pourquoi typeof null retourne object en JavaScript", vérifié et
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+console.log(NaN === NaN);       // Affiche : false
+console.log(Number.isNaN(NaN)); // Affiche : true
+console.log(Number.isNaN("abc")); // Affiche : false (car "abc" n'est pas converti implicitement)
+
 
 **Source :** 
 https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN
