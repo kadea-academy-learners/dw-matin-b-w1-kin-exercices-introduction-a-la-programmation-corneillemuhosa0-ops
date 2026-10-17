@@ -335,17 +335,27 @@ Oui, prompt : "Filtrer colonnes console table JS et retour de find et filter si 
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
+Pour trier le bulletin par ordre décroissant des moyennes, on utilise la méthode `.sort((a, b) => b.moyenne - a.moyenne)`. La méthode `.sort()` modifie directement (par effet de bord) le tableau d'origine en réorganisant ses éléments en place. Pour éviter cette mutation, on peut créer une copie superficielle du tableau avant de le trier, par exemple en utilisant l'opérateur de décomposition `[...]`.
+
 ...
 
 **Mon test dans la console :**
 
-```js
-// colle ici le test que tu as exécuté et le résultat obtenu
-```
+const notes = [{ moyenne: 12 }, { moyenne: 17 }, { moyenne: 15 }];
+const trie = [...notes].sort((a, b) => b.moyenne - a.moyenne);
+console.log(trie); // Affiche le tableau trié par ordre décroissant
+console.log(notes); // Le tableau d'origine reste inchangé
+
+
 
 **Source :** 
 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+
+Oui, prompt : "Trier un tableau d'objets avec sort en JS et éviter la mutation", vérifié et validé sur MDN Web Docs.
+
 
 ## A5 — Le nombre mystère
 
@@ -353,14 +363,15 @@ Oui, prompt : "Filtrer colonnes console table JS et retour de find et filter si 
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
+
+
 ...
 
 **Mon test dans la console :**
 
-```js
-// colle ici le test que tu as exécuté et le résultat obtenu
-```
+
 
 **Source :** 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+
