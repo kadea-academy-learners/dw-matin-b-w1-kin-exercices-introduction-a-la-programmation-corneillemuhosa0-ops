@@ -362,16 +362,33 @@ Oui, prompt : "Trier un tableau d'objets avec sort en JS et éviter la mutation"
 **Question :** Explique la « recherche dichotomique » et pourquoi 7 essais suffisent toujours pour trouver un nombre entre 1 et 100.
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+La recherche dichotomique est un algorithme qui consiste à diviser par deux l'intervalle de recherche à chaque tentative. Pour un intervalle de 100 nombres, chaque choix élimine la moitié des options restantes ($100 \rightarrow 50 \rightarrow 25 \rightarrow 12 \rightarrow 6 \rightarrow 3 \rightarrow 1$). Comme $2^7 = 128$, cela signifie qu'en 7 essais maximum, on dispose de suffisamment de divisions pour cibler précisément n'importe quel nombre entre 1 et 100.
+
 
 
 
 ...
 
 **Mon test dans la console :**
+let min = 1;
+let max = 100;
+let cible = 42;
+let essais = 0;
+while (min <= max) {
+    essais++;
+    let milieu = Math.floor((min + max) / 2);
+    if (milieu === cible) { console.log(`Trouvé en ${essais} essais`); break; }
+    else if (milieu < cible) { min = milieu + 1; }
+    else { max = milieu - 1; }
+}
 
 
 
 **Source :** 
 
+https://developer.mozilla.org/fr/docs/Web/JavaScript
+
+
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
+Oui, prompt : "Expliquer la recherche dichotomique et pourquoi 7 essais suffisent pour 100 en informatique", vérifié et validé sur MDN Web Docs.

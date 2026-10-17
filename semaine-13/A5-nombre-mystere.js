@@ -22,4 +22,31 @@ Explique la « recherche dichotomique » et pourquoi 7 essais suffisent toujours
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
+const nombreMystere = Math.floor(Math.random() * 100) + 1;
+let essaisRestants = 7;
+let trouve = false;
+let nombreEssaisTotal = 0;
+
+while (essaisRestants > 0 && !trouve) {
+    const saisie = prompt(`Devine le nombre entre 1 et 100 (Essais restants : ${essaisRestants}) :`);
+
+    if (saisie === null) {
+        alert("Jeu interrompu par l'utilisateur.");
+        break;
+    }
+
+    const nombreSaisi = Number(saisie);
+ if (nombreSaisi === nombreMystere) {
+        trouve = true;
+        alert(`Trouvé en ${nombreEssaisTotal} essais ! Le nombre mystère était bien ${nombreMystere}.`);
+    } else if (nombreSaisi < nombreMystere) {
+        alert("C'est plus grand !");
+    } else {
+        alert("C'est plus petit !");
+    }
+}
+
+if (!trouve && essaisRestants === 0) {
+    alert(`Dommage ! Vous avez épuisé vos 7 essais. Le nombre mystère était : ${nombreMystere}.`);
+}
 
