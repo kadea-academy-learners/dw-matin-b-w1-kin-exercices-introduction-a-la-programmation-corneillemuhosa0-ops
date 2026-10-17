@@ -262,18 +262,24 @@
 **Question :** Pourquoi 0.1 + 0.2 ne donne-t-il pas 0.3 en JavaScript ? Et pourquoi toFixed() est un piège si on veut continuer à calculer ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Et bien parce que javaScript utilise la norme IEEE 754 pour stocker les nombres décimaux en binaire (sur 64 bits). Dans ce format, des nombres simples comme 0.1 ou 0.2 deviennent des fractions binaires infinies, ce qui génère une infime erreur d'arrondi (`0.30000000000000004`). Par ailleurs, la méthode `.toFixed()` transforme le nombre en chaîne de caractères (`string`), ce qui fausse les calculs ultérieurs si l'on tente de faire des opérations mathématiques directes avec.
 
 ...
 
 **Mon test dans la console :**
 
-```js
-// colle ici le test que tu as exécuté et le résultat obtenu
-```
+console.log(0.1 + 0.2); // Affiche : 0.30000000000000004
+console.log((0.1 + 0.2).toFixed(2)); // Affiche : "0.30" (string)
+console.log(5 + "0.30"); // Affiche : "50.30" (concaténation au lieu d'une addition)
+
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Data_structures#type_nombre
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+
+Oui, prompt : "Pourquoi 0.1 + 0.2 ne fait pas 0.3 en JS et piège toFixed", vérifié et validé sur MDN Web Docs.
+
 
 ## A2 — Le moteur de paie v2
 
