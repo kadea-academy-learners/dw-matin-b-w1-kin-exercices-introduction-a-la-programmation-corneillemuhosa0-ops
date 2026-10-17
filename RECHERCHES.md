@@ -308,18 +308,26 @@ Oui, prompt : "Expliquer Array.prototype.reduce() en JavaScript et donner un exe
 **Question :** Comment afficher seulement les colonnes nom et stock avec console.table() ? Et que renvoient .find() et .filter() quand rien ne correspond ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Pour restreindre l'affichage de `console.table()` aux colonnes spécifiques, on lui passe un second argument sous forme de tableau de chaînes de caractères contenant le nom des clés souhaitées : `console.table(inventaire, ["nom", "stock"])`.
 
+En ce qui concerne la recherche : lorsque aucun élément ne satisfait la condition, `.find()` renvoie la valeur `undefined`, tandis que `.filter()` renvoie toujours un nouveau tableau vide `[]`.
 ...
 
 **Mon test dans la console :**
 
-```js
-// colle ici le test que tu as exécuté et le résultat obtenu
-```
+const stock = [{ nom: "Clé USB", stock: 10 }, { nom: "Souris", stock: 0 }];
+console.table(stock, ["nom", "stock"]);
+console.log(stock.find(p => p.nom === "Ecran")); // Affiche : undefined
+console.log(stock.filter(p => p.nom === "Ecran")); // Affiche : []
+
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/API/console/table
+
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+
+Oui, prompt : "Filtrer colonnes console table JS et retour de find et filter si introuvable", vérifié et validé sur MDN Web Docs.
 
 ## A4 — Le classement de la promo
 
