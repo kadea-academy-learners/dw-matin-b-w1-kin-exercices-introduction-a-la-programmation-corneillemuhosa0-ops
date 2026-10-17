@@ -20,6 +20,9 @@ Dans la toute première version de JavaScript (en 1995), les valeurs étaient st
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+console.log(typeof null);      // Affiche : "object"
+console.log(typeof undefined); // Affiche : "undefined"
+console.log(null === null);    // Affiche : true
 
 **Source :** 
 https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/typeof#null
@@ -42,8 +45,10 @@ Oui, prompt : "Pourquoi typeof null retourne object en JavaScript", vérifié et
 ```
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Pourquoi NaN === NaN est faux en JavaScript et comment le détecter", vérifié et validé sur MDN Web Docs.
 
 ## F3 — Pair ou impair : le tirage des tickets
 

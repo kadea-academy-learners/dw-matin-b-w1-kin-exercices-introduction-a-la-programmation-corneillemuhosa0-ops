@@ -21,4 +21,12 @@ Qu'est-ce que NaN, et pourquoi NaN === NaN renvoie false ? Quelle fonction utili
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
+const saisie = "2500";
+console.log(saisie + 500); 
+
+// Le résultat est faux (2500500) car l'opérateur '+' effectue une concaténation de chaînes de caractères au lieu d'une addition arithmétique.
+
+const saisieConvertie = Number(saisie);
+console.log(saisieConvertie + 500);
+
 
