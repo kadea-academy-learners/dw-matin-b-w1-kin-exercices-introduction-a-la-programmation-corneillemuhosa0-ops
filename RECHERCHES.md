@@ -115,6 +115,7 @@ Oui, prompt : "Enchaîner plusieurs ternaires en JavaScript et bonnes pratiques"
 **Question :** Quand peut-on enlever les parenthèses autour des paramètres, et quand peut-on enlever return et les accolades ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+On peut omettre les parenthèses autour des paramètres d'une fonction fléchée s'il n'y a qu'un seul et unique paramètre. On peut également se passer des accolades `{}` et du mot-clé `return` (c'est le retour implicite) lorsque le corps de la fonction se résume à une seule expression ou instruction unique.
 
 ...
 
@@ -123,10 +124,17 @@ Oui, prompt : "Enchaîner plusieurs ternaires en JavaScript et bonnes pratiques"
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+const doubler = x => x * 2;
+console.log(doubler(5)); // Affiche : 10
+
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Syntaxe des fonctions fléchées en JavaScript sans accolades ni parenthèses", vérifié et validé sur MDN Web Docs.
+
 
 ## F6 — Le compte à rebours
 
