@@ -20,4 +20,22 @@ Cite tous les opérateurs d'affectation composée (+=, -=…) et donne un exempl
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
+let total = 0;
+
+for (let i = 1; i <= 12; i++) {
+    let versement = 2000;
+
+    if (i % 4 === 0) {
+        versement += 1000;
+        total += versement;
+        console.log(`Semaine ${i} : ${total} FC (bonus !)`);
+    } else {
+        total += versement;
+        console.log(`Semaine ${i} : ${total} FC`);
+    }
+}
+
+console.log(`Total après 12 semaines : ${total} FC`);
+
+
 

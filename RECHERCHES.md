@@ -334,18 +334,35 @@ Oui, prompt : "Explication de l'insertion automatique de point-virgule ASI avec 
 **Question :** Cite tous les opérateurs d'affectation composée (+=, -=…) et donne un exemple pour chacun.
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Les opérateurs d'affectation composée permettent de modifier la valeur d'une variable en combinant une opération mathématique et une réaffectation en un seul symbole concis. 
+Voici les principaux opérateurs en JavaScript :
+- `+=` (Addition) : `let x = 5; x += 3;` (x vaut 8)
+- `-=` (Soustraction) : `let x = 5; x -= 2;` (x vaut 3)
+- `*=` (Multiplication) : `let x = 4; x *= 3;` (x vaut 12)
+- `/=` (Division) : `let x = 10; x /= 2;` (x vaut 5)
+- `%=` (Modulo) : `let x = 5; x %= 2;` (x vaut 1)
+- `**=` (Exponentiation) : `let x = 2; x **= 3;` (x vaut 8)
+
 
 ...
 
 **Mon test dans la console :**
+
+let score = 10;
+score += 5;
+console.log(score); // Affiche : 15
+
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Liste des opérateurs d'affectation composée en JavaScript", vérifié et validé sur MDN Web Docs.
+
 
 ## M8 — La batterie qui se décharge
 
