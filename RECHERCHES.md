@@ -86,6 +86,7 @@ Oui, prompt : "Que renvoie -7 % 2 en JavaScript et pourquoi utiliser !== 0 pour 
 **Question :** Peut-on enchaîner plusieurs ternaires ? Pourquoi est-ce souvent déconseillé ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Oui, il est techniquement possible d'enchaîner ou d'imbriquer plusieurs opérateurs ternaires. Cependant, c'est fortement déconseillé car cela détériore rapidement la lisibilité du code (souvent comparé à du code illisible ou "code spaghetti"). Pour des conditions multiples, il est préférable d'utiliser des structures `if / else if / else` ou un bloc `switch` qui sont beaucoup plus clairs et faciles à maintenir.
 
 ...
 
@@ -94,10 +95,20 @@ Oui, prompt : "Que renvoie -7 % 2 en JavaScript et pourquoi utiliser !== 0 pour 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+const note = 14;
+const mention = note >= 16 ? "Très bien" : note >= 12 ? "Bien" : note >= 10 ? "Passable" : "Échec";
+console.log(mention); // Affiche : Bien
+
+
 
 **Source :** 
 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+
+
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+
+Oui, prompt : "Enchaîner plusieurs ternaires en JavaScript et bonnes pratiques", vérifié et validé sur MDN Web Docs.
 
 ## F5 — Ma première fonction fléchée
 
