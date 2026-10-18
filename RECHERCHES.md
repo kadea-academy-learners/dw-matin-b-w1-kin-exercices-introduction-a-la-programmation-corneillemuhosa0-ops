@@ -279,6 +279,7 @@ Oui, prompt : "Différence entre opérateur logique OU || et coalescence des nul
 **Question :** Pourquoi var est-il banni du code moderne ? Cherche ce que sont la portée de fonction et le « hoisting ».
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Le mot-clé `var` est banni en JavaScript moderne car sa portée est limitée à la fonction entière (portée de fonction) et non au bloc d'instructions (`{}`), ce qui provoque souvent des fuites de variables involontaires. De plus, `var` subit le phénomène de *hoisting* (remontée de la déclaration en haut du fichier ou de la fonction sans la valeur), entraînant la présence de variables `undefined` difficiles à déboguer. `let` et `const` empêchent ces comportements imprévisibles grâce à la portée de bloc strict.
 
 ...
 
@@ -287,10 +288,19 @@ Oui, prompt : "Différence entre opérateur logique OU || et coalescence des nul
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+```js
+console.log(monVar); // Affiche : undefined (hoisting avec var)
+var monVar = 10;
+
+// console.log(monLet); // ReferenceError (zone morte temporaire avec let)
+let monLet = 10;
+
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Glossary/Hoisting
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Explication du hoisting et de la portée de var vs let const en JS", vérifié et validé sur MDN Web Docs.
 
 ## M6 — Le détective du return
 

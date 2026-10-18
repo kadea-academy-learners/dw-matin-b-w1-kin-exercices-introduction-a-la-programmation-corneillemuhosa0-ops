@@ -40,8 +40,10 @@ Pourquoi var est-il banni du code moderne ? Cherche ce que sont la portée de fo
 
 const ville = 'Kinshasa';
 if (true) {
-  const commune = 'Gombe';
-  console.log(ville);
+  const commune = 'Gombe'; // - console.log(commune) en dehors du if va lever une ReferenceError car commune a une portée de bloc.
+
+  console.log(ville); // - console.log(ville) à l'intérieur du if fonctionnera (accès à la portée globale).
+
 }
 console.log(commune);
 
@@ -49,5 +51,28 @@ const afficher = () => {
   const secret = 'pondu';
   return secret;
 };
-console.log(afficher());
+console.log(afficher());  // - La fonction afficher() ne s'exécutera pas car le script plantera à l'étape précédente (ReferenceError).
+
 console.log(secret);
+
+
+
+let commune; // Déclaration globale pour stocker la valeur du bloc
+
+const ville = 'Kinshasa';
+if (true) {
+    commune = 'Gombe'; // Assignation de la valeur dans le bloc
+    console.log(ville); // Affiche : Kinshasa
+}
+console.log(commune); // Affiche : Gombe (plus d'erreur !)
+
+const afficher = () => {
+    const secret = 'pondu';
+    return secret;
+};
+
+console.log(afficher()); // Affiche : pondu
+
+// La variable 'secret' est confinée dans la fonction afficher(). 
+// Pour l'afficher sans déplacer sa déclaration, on utilise le retour de la fonction :
+console.log(afficher()); // Affiche : pondu (remplace le console.log(secret) qui provoquait une erreur)
