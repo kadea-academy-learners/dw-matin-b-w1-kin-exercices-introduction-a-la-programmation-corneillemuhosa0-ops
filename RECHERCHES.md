@@ -307,18 +307,27 @@ Oui, prompt : "Explication du hoisting et de la portée de var vs let const en J
 **Question :** Le troisième bug vient de l'« insertion automatique de point-virgule » (ASI). Explique ce mécanisme en 3 lignes.
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+L'insertion automatique de point-virgule (ASI) est un mécanisme par lequel JavaScript ajoute automatiquement des points-virgules à la fin des lignes si l'on oublie d'en mettre. Dans le cas du mot-clé `return`, si l'on saute une ligne juste après, JavaScript insère directement un point-virgule après `return`, ce qui fait que la fonction renvoie `undefined` au lieu de la valeur située à la ligne suivante.
+
 
 ...
 
 **Mon test dans la console :**
+const f = () => {
+    return
+    "test";
+};
+console.log(f()); // Affiche : undefined (car l'ASI a fermé le return)
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Explication de l'insertion automatique de point-virgule ASI avec return en JavaScript", vérifié et validé sur MDN Web Docs.
 
 ## M7 — La tirelire numérique
 
