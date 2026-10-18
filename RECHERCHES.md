@@ -142,6 +142,7 @@ Oui, prompt : "Syntaxe des fonctions fléchées en JavaScript sans accolades ni 
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
+Le mot-clé `continue` permet d'interrompre l'itération en cours d'une boucle pour passer directement à l'itération suivante, en sautant le code qui suit dans le bloc. À l'inverse, le mot-clé `break` stoppe et quitte complètement la boucle, arrêtant définitivement son exécution.
 ...
 
 **Mon test dans la console :**
@@ -149,10 +150,20 @@ Oui, prompt : "Syntaxe des fonctions fléchées en JavaScript sans accolades ni 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+for (let i = 1; i <= 3; i++) {
+    if (i === 2) {
+        continue;
+    }
+    console.log(i); // Affiche 1, puis 3 (le 2 est ignoré)
+}
+
 
 **Source :** 
 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/continue
+
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Rôle de continue et différence avec break en JavaScript", vérifié et validé sur MDN Web Docs.
 
 ## M1 — FizzBuzz kinois
 

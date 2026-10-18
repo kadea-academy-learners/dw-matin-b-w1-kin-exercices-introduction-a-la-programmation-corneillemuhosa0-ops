@@ -21,3 +21,15 @@ Recherche (à rédiger dans RECHERCHES.md) :
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
 
+
+let resultat = "";
+
+for (let i = 10; i >= 1; i--) {
+    if (i === 5) {
+        continue; // Saute le nombre 5 sans modifier la condition de la boucle
+    }
+    resultat += `${i}, `;
+}
+
+resultat += "Décollage !";
+console.log(resultat);
