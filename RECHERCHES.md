@@ -60,6 +60,8 @@ Oui, prompt : "Pourquoi NaN === NaN est faux en JavaScript et comment le détect
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
+En JavaScript, l'opérateur modulo (`%`) conserve le signe du dividende. Par conséquent, l'opération `-7 % 2` renvoie `-1` et non `1`. Si l'on teste la condition avec `=== 1`, les nombres impairs négatifs échoueront. En utilisant plutôt `!== 0`, on s'assure de détecter correctement tous les nombres impairs, qu'ils soient positifs ou négatifs.
+
 ...
 
 **Mon test dans la console :**
@@ -67,10 +69,17 @@ Oui, prompt : "Pourquoi NaN === NaN est faux en JavaScript et comment le détect
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+console.log(-7 % 2);          // Affiche : -1
+console.log(-7 % 2 === 1);    // Affiche : false
+console.log(-7 % 2 !== 0);    // Affiche : true
+
 
 **Source :** 
 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Remainder
+
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Que renvoie -7 % 2 en JavaScript et pourquoi utiliser !== 0 pour les impairs", vérifié et validé sur MDN Web Docs.
 
 ## F4 — Le contrôleur du bus
 
