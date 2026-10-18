@@ -201,6 +201,7 @@ Oui, prompt : "Pourquoi le test FizzBuzz est célèbre en entretien de développ
 **Question :** Comment afficher 75000 sous la forme 75 000 avec toLocaleString() ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+La méthode `.toLocaleString()` s'applique sur un nombre et permet de le formater selon la locale spécifiée. Pour obtenir un espace comme séparateur des milliers (format français), on passe le paramètre de langue `'fr-FR'` : `(75000).toLocaleString('fr-FR')`. Cela renvoie la chaîne de caractères `"75 000"`.
 
 ...
 
@@ -209,10 +210,18 @@ Oui, prompt : "Pourquoi le test FizzBuzz est célèbre en entretien de développ
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+const montant = 75000;
+console.log(montant.toLocaleString('fr-FR')); // Affiche : "75 000"
+
+
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Formater un nombre avec espace séparateur de milliers toLocaleString JS", vérifié et validé sur MDN Web Docs.
+
 
 ## M3 — Le détecteur de champs vides (Truthy / Falsy)
 
