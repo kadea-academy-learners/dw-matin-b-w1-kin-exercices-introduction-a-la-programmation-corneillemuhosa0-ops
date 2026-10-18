@@ -22,3 +22,19 @@ Quelle est la différence entre while et do...while ? Que donnerait l'étape 4 a
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
 
+let batterie = 100;
+let heures = 0;
+while (batterie > 20) {
+    batterie -= 15;
+    heures++;
+}
+
+console.log(`Après ${heures} h, batterie à ${batterie} % : branche ton téléphone !`);
+let batterieTest = 15;
+let tours = 0;
+
+while (batterieTest > 20) {
+    batterieTest -= 15;
+    tours++;
+}
+console.log(`Test avec 15% (while) : ${tours} tour (la condition est fausse dès le départ).`);

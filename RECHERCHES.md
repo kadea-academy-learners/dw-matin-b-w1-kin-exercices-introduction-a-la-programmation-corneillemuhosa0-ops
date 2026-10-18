@@ -369,18 +369,25 @@ Oui, prompt : "Liste des opérateurs d'affectation composée en JavaScript", vé
 **Question :** Quelle est la différence entre while et do...while ? Que donnerait l'étape 4 avec un do...while ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+La boucle `while` vérifie sa condition *avant* d'exécuter le bloc de code, ce qui signifie qu'elle peut s'exécuter zéro fois si la condition est fausse au départ. À l'inverse, la boucle `do...while` exécute son bloc de code *au moins une fois* avant de tester la condition à la fin. Pour l'étape 4 (en partant de 15 %), un `while` classique fait 0 tour, tandis qu'un `do...while` ferait exactement 1 tour car le code s'exécute d'abord avant d'évaluer la condition.
 
 ...
 
 **Mon test dans la console :**
+let x = 15;
+do {
+    console.log("Exécuté une fois !");
+} while (x > 20); // Affiche le message malgré tout
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/do...while
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Différence entre while et do while en JavaScript", vérifié et validé sur MDN Web Docs.
 
 ## A1 — Kadea Express v2 : le calculateur de livraison
 
