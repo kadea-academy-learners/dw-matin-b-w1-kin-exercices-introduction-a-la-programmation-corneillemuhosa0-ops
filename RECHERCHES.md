@@ -228,18 +228,25 @@ Oui, prompt : "Formater un nombre avec espace séparateur de milliers toLocaleSt
 **Question :** Quelle est la liste complète des valeurs falsy en JavaScript ? (Indice : il y en a plus que dans cet exercice.)
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+En JavaScript, une valeur *falsy* est une valeur qui est évaluée comme fausse lors d'une conversion en booléen. La liste complète des valeurs *falsy* officielles comporte 8 éléments : `false`, `0`, `-0`, `0n` (BigInt zéro), `""` (chaîne de caractères vide), `null`, `undefined`, et `NaN`. Toutes les autres valeurs sont considérées comme *truthy*.
 
 ...
 
 **Mon test dans la console :**
+console.log(Boolean(0));       // Affiche : false
+console.log(Boolean("texte")); // Affiche : true
+
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Glossary/Falsy
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Liste complète des valeurs falsy en JavaScript", vérifié et validé sur MDN Web Docs.
+
 
 ## M4 — Le score par défaut : || contre ??
 
