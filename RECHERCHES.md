@@ -253,18 +253,26 @@ Oui, prompt : "Liste complète des valeurs falsy en JavaScript", vérifié et va
 **Question :** Que fait l'opérateur ?? (coalescence des nuls) et en quoi est-il différent de || ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+L'opérateur de coalescence des nuls (`??`) renvoie son opérande de droite uniquement lorsque son opérande de gauche vaut `null` ou `undefined`. À l'inverse, l'opérateur `||` évalue toutes les valeurs *falsy* (`0`, `""`, `false`, `NaN`) comme fausses. L'utilisation de `??` est donc indispensable pour éviter d'écraser des valeurs valides comme `0` ou `false` par une valeur par défaut.
+
 
 ...
 
 **Mon test dans la console :**
+const x = 0;
+console.log(x ?? 10); // Affiche : 0
+console.log(x || 10); // Affiche : 10
+
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+Oui, prompt : "Différence entre opérateur logique OU || et coalescence des nuls ?? en JavaScript", vérifié et validé sur MDN Web Docs.
 
 ## M5 — La vitre teintée (portée de bloc)
 
