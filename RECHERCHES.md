@@ -170,6 +170,7 @@ Oui, prompt : "Rôle de continue et différence avec break en JavaScript", véri
 **Question :** Pourquoi FizzBuzz est-il célèbre dans les entretiens d'embauche de développeurs ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Le test FizzBuzz est devenu un grand classique des entretiens car, malgré sa simplicité apparente, il permet d'identifier rapidement les candidats qui n'ont pas les bases logiques fondamentales en programmation. Il permet d'évaluer la maîtrise des boucles, des conditions et surtout la rigueur dans l'ordre de priorité des tests logiques.
 
 ...
 
@@ -178,10 +179,22 @@ Oui, prompt : "Rôle de continue et différence avec break en JavaScript", véri
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+for (let i = 1; i <= 15; i++) {
+    if (i % 15 === 0) console.log("FizzBuzz");
+    else if (i % 3 === 0) console.log("Fizz");
+    else if (i % 5 === 0) console.log("Buzz");
+    else console.log(i);
+}
+
 
 **Source :** 
+https://developer.mozilla.org/fr/docs/Web/JavaScript
+
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
+
+Oui, prompt : "Pourquoi le test FizzBuzz est célèbre en entretien de développement", vérifié et validé sur MDN Web Docs.
+
 
 ## M2 — Le distributeur automatique (DAB)
 
